@@ -59,6 +59,7 @@ master.menu.administrator.shutdown = Parar el sistema
 
 master.menu.provider = Proveedor
 master.menu.provider.favourite-link = Enlace favorito
+master.menu.provider.request.create = Crear peticion
 
 # master.menu.consumer ##########################################################
 
