@@ -21,4 +21,6 @@ provider.request.form.label.reward = Recompensa:
 provider.request.form.button.create = Crear
 provider.request.form.button.create.confirm = ¿Estas seguro de crear esta peticion? Luego no se podrá borrar
 
+provider.request.error.must-accept = Debes de aceptar la licencia primero
+
 provider.request.form.button.return = Volver

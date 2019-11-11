@@ -20,4 +20,6 @@ provider.request.form.label.reward = Reward:
 provider.request.form.button.create = Create
 provider.request.form.button.create.confirm = Are you about create this request? After you wonn't be able to delete it
 
+provider.request.error.must-accept = Must accept the license first
+
 provider.request.form.button.return = Return

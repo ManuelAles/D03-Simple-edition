@@ -65,6 +65,7 @@ master.menu.provider.request.create = Throw a request
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+master.menu.consumer.offer.create = Throw an offer
 
 # master.menu.user-account ####################################################
 
