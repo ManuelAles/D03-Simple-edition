@@ -42,7 +42,7 @@ public class CompanyRecord extends DomainEntity {
 	private String				web;
 
 	@NotBlank
-	@Pattern(regexp = "^([+]([1-9][0-9]{0,3})\\s)?([(]{0,1}[0-9]{1,4}[)])?[0-9].{6,9}$")
+	@Pattern(regexp = "^([+]([1-9][0-9]{0,3}\\s))?([(]{0,1}[0-9]{1,4}[)]){0,1}?[0-9]{6,9}$")
 	/*
 	 * +999 (9999)999999
 	 * +999 optional, rang(1,999)

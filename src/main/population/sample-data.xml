@@ -181,7 +181,7 @@
 		<property name="sector" value="example 2" />
 		<property name="ceoName" value="CO Name ex2" />
 		<property name="activitiesDescription" value="activities ex 2" />
-		<property name="phone" value="+999 (9999)999999" />
+		<property name="phone" value="+666 (9999)999999" />
 		<property name="web" value="http://company2example.com" />
 		<property name="mail" value="companymail2@example.com" />
 		<property name="inc" value="false" />
@@ -193,7 +193,7 @@
 		<property name="sector" value="example 3" />
 		<property name="ceoName" value="CO Name ex3" />
 		<property name="activitiesDescription" value="activities ex 3" />
-		<property name="phone" value="+999 (9999)999999" />
+		<property name="phone" value="(9999)999999" />
 		<property name="web" value="http://company3example.com" />
 		<property name="mail" value="companymail3@example.com" />
 		<property name="inc" value="true" />
@@ -205,7 +205,7 @@
 		<property name="sector" value="example 4" />
 		<property name="ceoName" value="CO Name ex4" />
 		<property name="activitiesDescription" value="activities ex 4" />
-		<property name="phone" value="+999 (9999)999999" />
+		<property name="phone" value="+34 888111222" />
 		<property name="web" value="http://company4example.com" />
 		<property name="mail" value="companymail4@example.com" />
 		<property name="inc" value="true" />
@@ -217,7 +217,7 @@
 		<property name="sector" value="example 5" />
 		<property name="ceoName" value="CO Name ex5" />
 		<property name="activitiesDescription" value="activities ex 5" />
-		<property name="phone" value="+999 (9999)999999" />
+		<property name="phone" value="695034555" />
 		<property name="web" value="http://company5example.com" />
 		<property name="mail" value="companymail5@example.com" />
 		<property name="inc" value="true" />
