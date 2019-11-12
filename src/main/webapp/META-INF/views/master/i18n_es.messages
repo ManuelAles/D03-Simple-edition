@@ -51,7 +51,8 @@ master.menu.authenticated.challenge.list = Lista de desafíos
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
-master.menu.administrator.announcements = Todos los anuncios
+master.menu.administrator.announcement.all = Todos los anuncios
+master.menu.administrator.announcement.create = Crear un anuncio
 master.menu.administrator.configuration = Configuracion
 master.menu.administrator.shutdown = Parar el sistema
 
