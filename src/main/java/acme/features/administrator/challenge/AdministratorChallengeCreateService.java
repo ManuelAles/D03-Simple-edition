@@ -56,11 +56,17 @@ public class AdministratorChallengeCreateService implements AbstractCreateServic
 		return result;
 	}
 
+	//	TODO: El atributo deadline debe ser futuro, no puede ser un día anterior al actual!!
+
 	@Override
 	public void validate(final Request<Challenge> request, final Challenge entity, final Errors errors) {
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		//		Date now = new Date(System.currentTimeMillis() - 1);
+		//
+		//		assert entity.getDeadline().compareTo(now) > 0;
 	}
 
 	@Override
