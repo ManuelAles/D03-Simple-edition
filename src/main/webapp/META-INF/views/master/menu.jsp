@@ -47,6 +47,8 @@
 			<acme:menu-suboption code="master.menu.administrator.announcements" action="/administrator/announcement/list" />
 			<acme:menu-suboption code="master.menu.administrator.createAnnouncement" action="/administrator/announcement/create"/>
 			<acme:menu-suboption code="master.menu.administrator.configuration" action="/administrator/configuration/show"/>
+			<acme:menu-suboption code="master.menu.administrator.challenge.list" action="/administrator/challenge/list" />
+			<acme:menu-suboption code="master.menu.administrator.challenge.createChallenge" action="/administrator/challenge/create" />
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
 		</acme:menu-option>
