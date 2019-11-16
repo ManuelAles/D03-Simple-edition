@@ -53,6 +53,8 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.announcements = Todos los anuncios
 master.menu.administrator.createAnnouncement = Crear anuncio
+master.menu.administrator.challenge.list = Listar retos
+master.menu.administrator.challenge.createChallenge = Crear reto
 master.menu.administrator.configuration = Configuracion
 master.menu.administrator.shutdown = Parar el sistema
 
