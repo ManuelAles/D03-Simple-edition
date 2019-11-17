@@ -12,4 +12,5 @@ administrator.configuration.form.label.spamWordsEN = English spamwords
 administrator.configuration.form.label.spamWordsES = Spanish spanmwords
 administrator.configuration.form.label.threshold = Treshhold (%)
 	
+administrator.configuration.form.button.update = Update
 administrator.configuration.form.button.return = Return
