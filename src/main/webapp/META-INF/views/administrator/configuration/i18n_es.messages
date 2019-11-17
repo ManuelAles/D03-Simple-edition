@@ -12,4 +12,5 @@ administrator.configuration.form.label.spamWordsEN = Palabras de spam en inglés
 administrator.configuration.form.label.spamWordsES = Palabras de spam en español
 administrator.configuration.form.label.threshold = Umbral (%)
 	
-administrator.configuration.form.button.return = Return
+administrator.configuration.form.button.update = Actualizar	
+administrator.configuration.form.button.return = Volver
