@@ -2,6 +2,7 @@
 package acme.features.administrator.companyRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.Errors;
@@ -10,6 +11,7 @@ import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractCreateService;
 
+@Service
 public class AdministratorCompanyRecordCreateService implements AbstractCreateService<Administrator, CompanyRecord> {
 
 	//	INTERNAL STATES ----------------------------------------

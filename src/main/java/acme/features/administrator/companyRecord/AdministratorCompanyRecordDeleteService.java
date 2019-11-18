@@ -1,6 +1,8 @@
 
 package acme.features.administrator.companyRecord;
 
+import org.springframework.stereotype.Service;
+
 import acme.entities.companyRecords.CompanyRecord;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
@@ -8,6 +10,7 @@ import acme.framework.components.Request;
 import acme.framework.entities.Administrator;
 import acme.framework.services.AbstractDeleteService;
 
+@Service
 public class AdministratorCompanyRecordDeleteService implements AbstractDeleteService<Administrator, CompanyRecord> {
 
 	// Internal State----------------------------------
