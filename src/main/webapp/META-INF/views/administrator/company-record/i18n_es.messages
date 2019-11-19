@@ -24,4 +24,6 @@ administrator.company-record.form.label.stars = Estrellas
 
 administrator.company-record.button.return = Volver
 administrator.company-record.form.button.create = Crear
+administrator.company-record.form.button.update = Actualizar
+
 
