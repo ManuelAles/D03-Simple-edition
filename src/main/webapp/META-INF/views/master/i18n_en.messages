@@ -55,6 +55,8 @@ master.menu.administrator.company-record.create = Create Company Record
 master.menu.administrator.user-accounts = User accounts
 master.menu.administrator.announcements = All announcements
 master.menu.administrator.createAnnouncement = Create announcement
+master.menu.administrator.challenge.list = List challenges
+master.menu.administrator.challenge.createChallenge = Create challenge
 master.menu.administrator.configuration = Configuration
 master.menu.administrator.shutdown = Shut down
 
