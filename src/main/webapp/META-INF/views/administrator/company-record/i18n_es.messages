@@ -23,3 +23,5 @@ administrator.company-record.form.label.inc = ¿INC?
 administrator.company-record.form.label.stars = Estrellas
 
 administrator.company-record.button.return = Volver
+administrator.company-record.form.button.create = Crear
+
