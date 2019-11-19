@@ -34,7 +34,7 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert errors != null;
 
-		request.bind(entity, errors, "inc");
+		request.bind(entity, errors);
 	}
 
 	@Override
@@ -43,7 +43,7 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "name", "sector", "ceoName", "activitiesDescription", "web", "phone", "mail", "stars");
+		request.unbind(entity, model, "name", "sector", "ceoName", "activitiesDescription", "web", "phone", "mail", "inc", "stars");
 
 	}
 
@@ -65,10 +65,7 @@ public class AdministratorCompanyRecordCreateService implements AbstractCreateSe
 
 	@Override
 	public void create(final Request<CompanyRecord> request, final CompanyRecord entity) {
-		boolean inc;
 
-		inc = true;
-		entity.setInc(inc);
 		this.repository.save(entity);
 
 	}
