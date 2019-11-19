@@ -13,9 +13,9 @@ import acme.framework.repositories.AbstractRepository;
 public interface AdministratorCompanyRecordRepository extends AbstractRepository {
 
 	@Query("select cr from CompanyRecord cr")
-	Collection<CompanyRecord> findManyAll();
+	Collection<CompanyRecord> findManyCompanyRecord();
 
 	@Query("select cr from CompanyRecord cr where cr.id = ?1")
-	CompanyRecord findOneById(int id);
+	CompanyRecord findOneCompanyRecordById(int id);
 
 }

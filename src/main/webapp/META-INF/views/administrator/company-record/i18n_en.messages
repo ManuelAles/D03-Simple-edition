@@ -25,3 +25,4 @@ administrator.company-record.form.label.stars = Stars
 administrator.company-record.button.return = Return
 administrator.company-record.form.button.create = Create
 administrator.company-record.form.button.update = Update
+administrator.company-record.form.button.delete = Delete
