@@ -62,6 +62,22 @@ public class AdministratorConfigurationUpdateService implements AbstractUpdateSe
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
+
+		if (!errors.hasErrors("spamWordsES")) {
+			Boolean isEmpty = entity.getSpamWordsES().isEmpty();
+			errors.state(request, isEmpty, "spamWordsES", "adminsitrator.configuration.error.empty");
+		}
+
+		if (!errors.hasErrors("spamWordsEN")) {
+			Boolean isEmpty = entity.getSpamWordsEN().isEmpty();
+			errors.state(request, isEmpty, "spamWordsES", "adminsitrator.configuration.error.empty");
+		}
+
+		Boolean isNegative = entity.getThreshold() < 0.00;
+		Boolean isHigher = entity.getThreshold() > 100.00;
+		errors.state(request, isNegative, "threshold", "adminsitrator.configuration.error.negative");
+		errors.state(request, isHigher, "threshold", "adminsitrator.configuration.error.higher");
+
 	}
 
 	@Override

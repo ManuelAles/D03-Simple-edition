@@ -17,3 +17,5 @@ administrator.challenge.form.button.return = Volver
 administrator.challenge.form.button.update = Actualizar
 administrator.challenge.form.button.create = Crear
 administrator.challenge.form.button.delete = Borrar
+
+administrator.challenger.error.before= ¡La fecha final es anterior a la fecha actual!

@@ -41,6 +41,7 @@ public class Request extends DomainEntity {
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@DateTimeFormat(pattern = "dd/MM/yyyy HH:mm")
+	@NotNull
 	private Date				deadline;
 
 	@NotBlank

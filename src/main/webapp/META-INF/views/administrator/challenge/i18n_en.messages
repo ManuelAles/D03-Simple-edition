@@ -17,3 +17,5 @@ administrator.challenge.form.button.return = Return
 administrator.challenge.form.button.update = Update
 administrator.challenge.form.button.create = Create
 administrator.challenge.form.button.delete = Delete
+
+administrator.challenger.error.before = The deadline date is before from now!
