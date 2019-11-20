@@ -43,7 +43,7 @@ public class AdministratorCompanyRecordListService implements AbstractListServic
 
 		Collection<CompanyRecord> result;
 
-		result = this.repository.findManyAll();
+		result = this.repository.findManyCompanyRecord();
 
 		return result;
 	}

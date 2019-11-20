@@ -24,7 +24,7 @@
 		<acme:form-url code="administrator.company-record.form.label.web" path="web" />
 		<acme:form-textbox code="administrator.company-record.form.label.phone" path="phone" />
 		<acme:form-textbox code="administrator.company-record.form.label.mail" path="mail"/>
-		<acme:form-textbox code="administrator.company-record.form.label.inc" path="inc" placeholder="true/false"/>
+		<acme:form-checkbox code="administrator.company-record.form.label.inc" path="inc" />
 		<acme:form-textbox code="administrator.company-record.form.label.stars" path="stars"/>
 	
 	

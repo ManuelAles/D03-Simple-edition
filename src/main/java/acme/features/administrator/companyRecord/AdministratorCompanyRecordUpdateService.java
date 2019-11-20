@@ -1,6 +1,7 @@
 
 package acme.features.administrator.companyRecord;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.companyRecords.CompanyRecord;
@@ -15,6 +16,7 @@ public class AdministratorCompanyRecordUpdateService implements AbstractUpdateSe
 
 	// Internal State----------------------------------
 
+	@Autowired
 	AdministratorCompanyRecordRepository repository;
 
 
@@ -52,7 +54,7 @@ public class AdministratorCompanyRecordUpdateService implements AbstractUpdateSe
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneById(id);
+		result = this.repository.findOneCompanyRecordById(id);
 
 		return result;
 	}
