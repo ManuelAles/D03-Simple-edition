@@ -418,7 +418,7 @@ bg=yellow</panel_attributes>
 --
 + spamWordsEN: String {NotBlank}
 + spamWordsES: String {NotBlank}
-+ threshold: Double </panel_attributes>
++ threshold: Double  {Min(0), Max(100)}</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
