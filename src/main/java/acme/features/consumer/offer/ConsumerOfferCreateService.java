@@ -96,18 +96,25 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		//Comprueba que maxMoney es mayor que minMoney y que esta en euros
 		if (!errors.hasErrors("maxMoney")) {
-			Boolean higherReward = entity.getMaxMoney().getAmount() > entity.getMinMoney().getAmount();
 			Boolean currency = entity.getMaxMoney().getCurrency().equals("€") || entity.getMaxMoney().getCurrency().equals("EUR");
-			errors.state(request, higherReward, "maxMoney", "consumer.offer.error.maxMoney");
 			errors.state(request, currency, "maxMoney", "consumer.offer.error.currency");
+		}
+
+		if (!errors.hasErrors("maxMoney") && entity.getMinMoney() != null) {
+			Boolean higherReward = entity.getMaxMoney().getAmount() > entity.getMinMoney().getAmount();
+			errors.state(request, higherReward, "maxMoney", "consumer.offer.error.maxMoney");
+
 		}
 
 		//Comprueba que minMoney es mayor que minMoney y que esta en euros
 		if (!errors.hasErrors("minMoney")) {
-			Boolean lowerReward = !(entity.getMaxMoney().getAmount() <= entity.getMinMoney().getAmount());
 			Boolean currency = entity.getMinMoney().getCurrency().equals("€") || entity.getMinMoney().getCurrency().equals("EUR");
-			errors.state(request, lowerReward, "minMoney", "consumer.offer.error.minMoney");
 			errors.state(request, currency, "minMoney", "consumer.offer.error.currency");
+		}
+
+		if (!errors.hasErrors("minMoney") && entity.getMaxMoney() != null) {
+			Boolean lowerReward = !(entity.getMaxMoney().getAmount() <= entity.getMinMoney().getAmount());
+			errors.state(request, lowerReward, "minMoney", "consumer.offer.error.minMoney");
 		}
 
 	}
