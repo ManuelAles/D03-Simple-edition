@@ -1,7 +1,9 @@
 
 package acme.features.consumer.offer;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -75,6 +77,45 @@ public class ConsumerOfferCreateService implements AbstractCreateService<Consume
 
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "consumer.offer.error.must-accept");
+
+		Calendar calendar;
+		Date minimumDeadline;
+
+		//Comprueba que la fecha limite es en el futuro
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			minimumDeadline = calendar.getTime();
+			Boolean isAfter = entity.getDeadline().after(minimumDeadline);
+			errors.state(request, isAfter, "deadline", "consumer.offer.error.before");
+		}
+
+		//Comprueba que el ticker es único
+		Boolean notUnique = null;
+		notUnique = this.repository.findByTicker(entity.getTicker()) != null;
+		errors.state(request, !notUnique, "ticker", "consumer.offer.error.ticker");
+
+		//Comprueba que maxMoney es mayor que minMoney y que esta en euros
+		if (!errors.hasErrors("maxMoney")) {
+			Boolean currency = entity.getMaxMoney().getCurrency().equals("€") || entity.getMaxMoney().getCurrency().equals("EUR");
+			errors.state(request, currency, "maxMoney", "consumer.offer.error.currency");
+		}
+
+		if (!errors.hasErrors("maxMoney") && entity.getMinMoney() != null) {
+			Boolean higherReward = entity.getMaxMoney().getAmount() > entity.getMinMoney().getAmount();
+			errors.state(request, higherReward, "maxMoney", "consumer.offer.error.maxMoney");
+
+		}
+
+		//Comprueba que minMoney es mayor que minMoney y que esta en euros
+		if (!errors.hasErrors("minMoney")) {
+			Boolean currency = entity.getMinMoney().getCurrency().equals("€") || entity.getMinMoney().getCurrency().equals("EUR");
+			errors.state(request, currency, "minMoney", "consumer.offer.error.currency");
+		}
+
+		if (!errors.hasErrors("minMoney") && entity.getMaxMoney() != null) {
+			Boolean lowerReward = !(entity.getMaxMoney().getAmount() <= entity.getMinMoney().getAmount());
+			errors.state(request, lowerReward, "minMoney", "consumer.offer.error.minMoney");
+		}
 
 	}
 

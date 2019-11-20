@@ -1,7 +1,9 @@
 
 package acme.features.provider.request;
 
+import java.util.Calendar;
 import java.util.Date;
+import java.util.GregorianCalendar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -75,6 +77,28 @@ public class ProviderRequestCreateService implements AbstractCreateService<Provi
 
 		isAccepted = request.getModel().getBoolean("accept");
 		errors.state(request, isAccepted, "accept", "provider.request.error.must-accept");
+
+		Calendar calendar;
+		Date minimumDeadline;
+
+		//Comprueba que la fecha limite es en el futuro
+		if (!errors.hasErrors("deadline")) {
+			calendar = new GregorianCalendar();
+			minimumDeadline = calendar.getTime();
+			Boolean isAfter = entity.getDeadline().after(minimumDeadline);
+			errors.state(request, isAfter, "deadline", "provider.request.error.before");
+		}
+
+		//Comprueba que el ticker es único
+		Boolean notUnique = null;
+		notUnique = this.repository.findByTicker(entity.getTicker()) != null;
+		errors.state(request, !notUnique, "ticker", "provider.request.error.ticker");
+
+		//Comprueba que maxMoney es mayor que minMoney y que esta en euros
+		if (!errors.hasErrors("reward")) {
+			Boolean currency = entity.getReward().getCurrency().equals("€") || entity.getReward().getCurrency().equals("EUR");
+			errors.state(request, currency, "reward", "provider.request.error.currency");
+		}
 
 	}
 

@@ -16,12 +16,17 @@ consumer.offer.form.label.moment = Momento:
 consumer.offer.form.label.deadline = Fecha final:
 consumer.offer.form.label.reward = Recompensa:
 consumer.offer.form.label.ticker = Ticker:
-consumer.offer.form.label.minMoney = Recompensa mayor a: 
-consumer.offer.form.label.maxMoney = Recompensa menor a:
+consumer.offer.form.label.minMoney = Dinero minímo: 
+consumer.offer.form.label.maxMoney = Dinero máximo:
 
 consumer.offer.form.button.create = Crear
 consumer.offer.form.button.create.confirm = ¿Estas seguro de crear esta oferta? Luego no se podrá borrar
 
-consumer.offer.error.must-accept = Debes de aceptar la licencia primero
+consumer.offer.error.must-accept = Debes de aceptar la comprobación primero
+consumer.offer.error.before = La fecha final debe ser después que la fecha actual
+consumer.offer.error.ticker = El ticker debe de ser unico
+consumer.offer.error.maxMoney = El dinero máximo debe ser mayor que el dinero minímo
+consumer.offer.error.minMoney = El dinero minímo debe ser menor que el dinero máximo
+consumer.offer.error.currency = La moneda debe ser  € o EUR
 
 consumer.offer.form.button.return = Volver

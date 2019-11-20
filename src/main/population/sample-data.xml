@@ -116,6 +116,8 @@
 		</property>
 		<property name="ticker" value="RACBD-02345" />
 	</bean>
+	
+	<!-- Offers -->
 
 	<bean id="offer1" class="acme.entities.offers.Offer">
 		<property name="title" value="Sample offer 01" />
@@ -130,8 +132,6 @@
 		</property>
 		<property name="ticker" value="OACBD-12349" />
 	</bean>
-
-	<!-- Offers -->
 
 	<bean id="offer2" class="acme.entities.offers.Offer">
 		<property name="title" value="Sample offer 02" />

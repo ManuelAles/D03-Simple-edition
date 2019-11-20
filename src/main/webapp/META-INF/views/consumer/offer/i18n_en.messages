@@ -21,6 +21,11 @@ consumer.offer.form.label.maxMoney = Recompensa lower than:
 consumer.offer.form.button.create = Create
 consumer.offer.form.button.create.confirm = Are you about create this offer? After you wonn't be able to delete it
 
-consumer.offer.error.must-accept = Must accept the license first
+consumer.offer.error.must-accept = Must accept the checkboxx first
+consumer.offer.error.before = The deadline has to be after the current date
+consumer.offer.error.ticker = The ticker must be unique
+consumer.offer.error.maxMoney = The maxMoney has to be higher than the minMoney
+consumer.offer.error.minMoney = The minMoney has to be lower than the maxMoney
+consumer.offer.error.currency = The currency must be € or EUR
 
 consumer.offer.form.button.return = Return

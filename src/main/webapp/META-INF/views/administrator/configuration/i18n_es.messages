@@ -14,3 +14,7 @@ administrator.configuration.form.label.threshold = Umbral (%)
 	
 administrator.configuration.form.button.update = Actualizar	
 administrator.configuration.form.button.return = Volver
+
+adminsitrator.configuration.error.empty = La lista de spam no puede estar vacía
+adminsitrator.configuration.error.higher = El umbral tiene que ser menor a 100.00
+adminsitrator.configuration.error.negative = El umbral no puede ser negativo 
