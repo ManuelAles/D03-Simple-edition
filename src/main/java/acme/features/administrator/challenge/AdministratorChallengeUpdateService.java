@@ -101,17 +101,17 @@ public class AdministratorChallengeUpdateService implements AbstractUpdateServic
 
 		//		validación de recompensas (oro > plata > bronce)
 
-		if (!errors.hasErrors("goldReward")) {
+		if (!errors.hasErrors("goldReward") && entity.getBronzeReward() != null && entity.getSilverReward() != null && entity.getGoldReward() != null) {
 			Boolean balance = entity.getGoldReward().getAmount() > entity.getSilverReward().getAmount() && entity.getGoldReward().getAmount() > entity.getBronzeReward().getAmount();
 			errors.state(request, balance, "goldReward", "administrator.challenge.rewards");
 		}
 
-		if (!errors.hasErrors("silverReward")) {
+		if (!errors.hasErrors("silverReward") && entity.getBronzeReward() != null && entity.getSilverReward() != null && entity.getGoldReward() != null) {
 			Boolean balance = entity.getSilverReward().getAmount() < entity.getGoldReward().getAmount() && entity.getSilverReward().getAmount() > entity.getBronzeReward().getAmount();
 			errors.state(request, balance, "silverReward", "administrator.challenge.rewards");
 		}
 
-		if (!errors.hasErrors("bronzeReward")) {
+		if (!errors.hasErrors("bronzeReward") && entity.getBronzeReward() != null && entity.getSilverReward() != null && entity.getGoldReward() != null) {
 			Boolean balance = entity.getBronzeReward().getAmount() < entity.getGoldReward().getAmount() && entity.getBronzeReward().getAmount() < entity.getSilverReward().getAmount();
 			errors.state(request, balance, "bronzeReward", "administrator.challenge.rewards");
 		}
